@@ -1,0 +1,151 @@
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+/* Header */
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Baloo Da 2", cursive;
+}
+
+/* Navigation */
+#navbar {
+  position: fixed;
+  min-width: 300px;
+  top: 0px;
+  left: 0px;
+  width: 320px;
+  height: 100%;
+  white-space: nowrap;
+  font-family: "Baloo Da 2", cursive;
+  background: linear-gradient(to right, rgb(202, 6, 84), rgb(207, 171, 114));
+}
+
+#navbar header {
+  color: #fff;
+  font-weight: 800;
+  margin: 16px;
+  font-size: 2em;
+}
+
+#navbar ul {
+  height: 88%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #ccad56;
+  text-decoration: none;
+  cursor: pointer;
+  /* hover */
+  overflow: hidden;
+  background: linear-gradient(to right, #ccad56, pink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+
+#navbar a:hover {
+  box-shadow: inset 3px 0px #ccad56;
+  background-position: 0 100%;
+}
+
+/* Main Doc */
+
+#main-doc {
+  position: absolute;
+  margin-left: 330px;
+  padding: 20px;
+  background: white;
+}
+
+#main-doc header {
+  color: #ccad56;
+  text-align: left;
+}
+
+#main-doc h3 {
+  font-weight: 400;
+}
+
+#main-doc img {
+  width: auto;
+  height: 300px;
+}
+
+section article {
+  margin: 15px;
+  font-size: 0.96em;
+  font-weight: 300;
+}
+
+section li {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 400px;
+    border: none;
+    z-index: 1;
+  }
+
+  #navbar ul {
+    max-height: 300px;
+  }
+
+  #navbar li {
+    /* height: 2em; */
+    border-top: 0.5px solid wheat;
+    border-bottom: 0.5px solid wheat;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #navbar {
+    border: none;
+  }
+  #main-doc {
+    margin-left: -10px;
+  }
+}
